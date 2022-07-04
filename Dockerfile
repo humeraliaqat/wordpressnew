@@ -3,13 +3,13 @@ MAINTAINER Fernando Mayo <fernando@tutum.co>, Feng Honglin <hfeng@tutum.co>
 
 # Install plugins
 RUN apt-get update && \
-  apt-get -y install php5-gd && \
+  apt-get -y install php6-gd && \
   rm -rf /var/lib/apt/lists/*
   
   # Install packages
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-  apt-get -y install supervisor git apache2 libapache2-mod-php5 mysql-server php5-mysql pwgen php-apc php5-mcrypt && \
+  apt-get -y install supervisor git apache2 libapache2-mod-php6 mysql-server php6-mysql pwgen php-apc php6-mcrypt && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
   
   # Add image configuration and scripts
